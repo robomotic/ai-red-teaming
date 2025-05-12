@@ -143,16 +143,6 @@ Each phase is designed to address specific risks and ensure a comprehensive eval
 
 This image from the Microsoft blog illustrates the structured approach to AI red teaming, emphasizing the importance of systematic evaluation across different phases.
 
-## Key Resources
-
-- [OWASP GenAI Red Teaming Guide](https://genai.owasp.org/resource/genai-red-teaming-guide/)
-- [AI Safety Institute Red Teaming Framework (AISI)](https://aisi.go.jp/assets/pdf/ai_safety_RT_v1.00_en.pdf)
-- [OpenAI’s Approach to External Red Teaming (arXiv:2503.16431)](https://www.arxiv.org/abs/2503.16431)
-- [Microsoft Learn: AI Red Team](https://learn.microsoft.com/en-us/security/ai-red-team/)
-- [Red Teaming is a Critical Thinking Exercise: Part 1 (AVID Blog)](https://avidml.org/blog/red-teaming-1/)
-- [GenAI Red Teaming Guide (OWASP)](https://genai.owasp.org/resource/genai-red-teaming-guide/)
-- [MITRE ATLAS Framework](https://atlas.mitre.org/): A comprehensive repository for adversarial threat modeling in AI systems.
-- [MIT AI Risk Database](https://airisk.mit.edu/): A database for understanding and mitigating AI risks.
 
 ### Concepts from GenAI Red Teaming Guide
 - **Key Risks**: Prompt injection, toxic outputs, model extraction, bias, hallucinations, and data leakage.
@@ -169,6 +159,16 @@ This image from the Microsoft blog illustrates the structured approach to AI red
 - Red teaming is similar to research and acceptance testing: iterative, blameless, and focused on surfacing blind spots and real-world failure modes.
 - Ongoing monitoring and adaptive response are essential, as threats and user behaviors evolve after deployment.
 
+## Key Resources
+
+- [OWASP GenAI Red Teaming Guide](https://genai.owasp.org/resource/genai-red-teaming-guide/)
+- [AI Safety Institute Red Teaming Framework (AISI)](https://aisi.go.jp/assets/pdf/ai_safety_RT_v1.00_en.pdf)
+- [OpenAI’s Approach to External Red Teaming (arXiv:2503.16431)](https://www.arxiv.org/abs/2503.16431)
+- [Microsoft Learn: AI Red Team](https://learn.microsoft.com/en-us/security/ai-red-team/)
+- [Red Teaming is a Critical Thinking Exercise: Part 1 (AVID Blog)](https://avidml.org/blog/red-teaming-1/)
+- [GenAI Red Teaming Guide (OWASP)](https://genai.owasp.org/resource/genai-red-teaming-guide/)
+- [MITRE ATLAS Framework](https://atlas.mitre.org/): A comprehensive repository for adversarial threat modeling in AI systems.
+- [MIT AI Risk Database](https://airisk.mit.edu/): A database for understanding and mitigating AI risks.
 ---
 
 This document is a starting point. For detailed methodologies and the latest best practices, consult the resources above.
