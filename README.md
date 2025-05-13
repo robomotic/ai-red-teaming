@@ -1,5 +1,49 @@
 # AI Red Teaming Guidelines and Best Practices
 
+## Introduction to GenAI Red Teaming
+As Generative AI (GenAI) systems become increasingly integrated into enterprise operations and production workflows, security professionals must develop robust methodologies to identify and mitigate potential vulnerabilities in generative AI applications. GenAI Red Teaming involves systematically probing both the AI models and the systems used throughout the application lifecycle—from model development and training, through deployment, to production runtime environments. Adversarial testing helps validate whether security, reliability, and alignment with organizational values are maintained under various attack scenarios.
+
+Red teaming is a legacy tool for the cybersecurity industry, now extended to address AI-specific concerns such as prompt injection, model extraction, output manipulation, toxicity, harmful content generation, and hallucinations. It combines human expertise with automation and AI tools to evaluate both foundational models and interconnected application layers, ensuring comprehensive risk assessment across the AI ecosystem.
+
+### Why Does GenAI Red Teaming Matter?
+Traditional cybersecurity focuses on technical exploits, but GenAI Red Teaming also examines how AI models can produce harmful or deceptive outputs. As AI systems influence critical decisions, ensuring their safety and alignment with organizational values is crucial. GenAI Red Teaming helps organizations address unique security challenges, mitigate novel risks, and build trust in AI deployments.
+
+### Audience
+This guide is intended for:
+- Cybersecurity professionals transitioning into AI roles
+- AI/ML engineers responsible for model deployment security
+- Red team practitioners expanding to AI systems
+- Security architects, risk managers, adversarial attack researchers
+- Senior decision makers and C-level executives seeking insights into Generative AI security
+
+### Scope
+This guide provides process structure to help teams develop:
+- Methodologies for testing LLMs and generative AI systems
+- Techniques for identifying vulnerabilities in model deployment pipelines
+- Strategies for evaluating prompt security and input validation
+- Approaches to testing model output verification systems
+- Guidelines for documenting and categorizing AI-specific security findings
+
+Risks addressed include:
+- Adversarial attack risk
+- Alignment risk
+- Data risk (data leakage, data poison)
+- Interaction risk (hate speech, abusive language, toxicity)
+- Knowledge risk (hallucination, misinformation, disinformation)
+- Agent risk
+
+### Key Risks to Consider
+- **Prompt Injection:** Tricking the model into breaking its rules or leaking sensitive information
+- **Bias and Toxicity:** Generating harmful, offensive, or unfair outputs
+- **Data Leakage:** Extracting private information or intellectual property from the model
+- **Data Poisoning:** Manipulating training data to cause undesirable model behavior
+- **Hallucinations/Confabulations:** The model confidently provides false information
+- **Agentic Vulnerabilities:** Attacks on AI “agents” that combine multiple tools and decision-making steps
+- **Supply Chain Risks:** Risks from the complex, interconnected processes and dependencies in model creation and use
+
+### Future Planned Work
+This guide is a high-level primer, setting the stage for future efforts to mature AI Red Teaming practices. It is the starting point in a series of white papers that will later explore practical procedures, advanced techniques, and detailed scenarios. Additional resources will be developed based on feedback and industry collaboration.
+
 ## Overview
 
 This repository provides guidelines, best practices, and references for professional red teaming of generative AI systems, including large language models (LLMs), image, video, and audio generation models. The focus is on systematic, ethical, and impactful red teaming—beyond surface-level automation—drawing from leading industry and research resources.
@@ -15,59 +59,6 @@ The GenAI Red Teaming Guide emphasizes a structured approach to identifying vuln
 
 For further insight into the evolution and impact of AI red teaming, see [Microsoft AI Red Team: Building the future of safer AI](https://www.microsoft.com/en-us/security/blog/2023/08/07/microsoft-ai-red-team-building-future-of-safer-ai/).
 
-## Introduction
-As Generative AI (GenAI) systems become increasingly integrated into enterprise operations and production application workflows, security professionals must develop robust methodologies to identify and mitigate potential vulnerabilities in generative AI applications.
-
-GenAI Red Teaming involves systematically probing both the AI models that serve as central components for the applications, and the systems used throughout the lifecycle of the application: from model development and training, through application staging pipelines, and into production runtime environments. Adversarial testing helps engineers validate whether security, reliability, and alignment with organizational values are maintained under various attack scenarios.
-
-Red teaming is a legacy tool for the cybersecurity industry. With generative AI, the approach has been extended to incorporate AI-specific considerations such as prompt injection, model extraction, and output manipulation, and evaluations. Red teaming also addresses new concerns such as how toxicity, harmful content generation and hallucinations are introduced.
-
-### Audience
-This guide is intended for:
-- Experienced cybersecurity professionals transitioning into AI application roles.
-- AI/ML engineers responsible for model deployment security.
-- Red team practitioners expanding their expertise to AI systems.
-- Security architects designing AI implementation frameworks.
-- Risk management professionals overseeing AI deployments.
-- Security engineers seeking to understand the nuanced dynamics of employing large language models (LLMs) and generative AI within traditional cybersecurity frameworks, and emerging frameworks such as the NIST AI RMF, OWASP and MITRE ATLAS.
-- Adversarial attack researchers expanding knowledge about attacks on AI and machine learning models.
-- Senior decision makers and C-level executives seeking insights into Generative AI security.
-
-### Scope
-This guide aims to provide process structure to help teams develop:
-- Methodologies for testing LLMs and generative AI systems.
-- Techniques for identifying vulnerabilities in model deployment pipelines.
-- Strategies for evaluating prompt security and input validation.
-- Approaches to testing model output verification systems.
-- Guidelines for documenting and categorizing AI-specific security findings.
-
-The risks identified through these processes generally comprise:
-- Adversarial attack risk
-- Alignment risk
-- Data risk (data leakage, data poison)
-- Interaction risk (hate speech, abusive language and profanity [HAP], toxicity)
-- Knowledge risk (hallucination, misinformation, disinformation)
-- Agent risk
-
-### Future Planned Work
-This guide serves as a high-level, introductory primer, providing foundational knowledge and setting the stage for future efforts to mature AI Red Teaming practices. It represents the starting point in a series of white papers that will later explore practical procedures, advanced techniques, and detailed scenarios. Additional resources will be developed based on feedback and industry collaboration.
-
-## What is AI Red Teaming?
-
-AI red teaming is the practice of systematically probing AI systems to identify vulnerabilities, risks, and failure modes. It helps organizations:
-- Discover novel and emergent risks
-- Stress-test mitigations and safety controls
-- Improve safety metrics and risk assessments
-- Build public trust in AI deployments
-
-## What is GenAI Red Teaming?
-
-GenAI Red Teaming involves simulating adversarial behaviors against Generative AI systems—such as Large Language Models (LLMs)—to uncover vulnerabilities related to security, safety, and trust. By thinking like an attacker, this process identifies flaws before they can cause real-world harm. It combines human expertise with automation and AI tools to evaluate both foundational models and interconnected application layers, ensuring comprehensive risk assessment across the AI ecosystem.
-
-## Why Does It Matter?
-
-Traditional cybersecurity focuses on technical exploits, but GenAI Red Teaming also examines how AI models can produce harmful or deceptive outputs. As AI systems influence critical decisions, ensuring their safety and alignment with organizational values is crucial. GenAI Red Teaming helps organizations address unique security challenges, mitigate novel risks, and build trust in AI deployments.
-
 ## The Value of Red Teaming
 
 AI red teaming is a critical practice for ensuring the safety, security, and trustworthiness of generative AI systems. By simulating adversarial behaviors and probing for vulnerabilities, red teaming helps organizations:
@@ -75,16 +66,6 @@ AI red teaming is a critical practice for ensuring the safety, security, and tru
 - Stress-test safety controls and alignment mechanisms.
 - Build public trust by demonstrating a commitment to responsible AI practices.
 - Enhance system resilience against evolving threats.
-
-## Key Risks to Consider
-
-- **Prompt Injection:** Tricking the model into breaking its rules or leaking sensitive information.
-- **Bias and Toxicity:** Generating harmful, offensive, or unfair outputs.
-- **Data Leakage:** Extracting private information or intellectual property from the model.
-- **Data Poisoning:** Manipulating training data to cause undesirable model behavior.
-- **Hallucinations/Confabulations:** The model confidently provides false information.
-- **Agentic Vulnerabilities:** Attacks on AI “agents” that combine multiple tools and decision-making steps.
-- **Supply Chain Risks:** Risks from the complex, interconnected processes and dependencies in model creation and use.
 
 ## Emerging Methods for Red Teaming
 
@@ -162,7 +143,6 @@ Each phase is designed to address specific risks and ensure a comprehensive eval
 
 This image from the Microsoft blog illustrates the structured approach to AI red teaming, emphasizing the importance of systematic evaluation across different phases.
 
-
 ### Concepts from GenAI Red Teaming Guide
 - **Key Risks**: Prompt injection, toxic outputs, model extraction, bias, hallucinations, and data leakage.
 - **Holistic Methodology**: Includes model evaluation, implementation testing, infrastructure assessment, and runtime behavior analysis.
@@ -178,6 +158,19 @@ This image from the Microsoft blog illustrates the structured approach to AI red
 - Red teaming is similar to research and acceptance testing: iterative, blameless, and focused on surfacing blind spots and real-world failure modes.
 - Ongoing monitoring and adaptive response are essential, as threats and user behaviors evolve after deployment.
 
+## Notable Videos on AI Red Teaming
+
+Here are notable YouTube videos on AI red teaming with expert insights and practical lessons:
+
+- [AI Red Teaming in 2024 and Beyond](https://www.youtube.com/watch?v=nzfPUeB6UjM): features experts Daniel Miessler and Joseph Thacker discussing differences in AI red teaming, prompt injection, vulnerabilities, and enterprise protection strategies.
+- [Lessons From Red Teaming 100 Generative AI Products](https://www.youtube.com/watch?v=2sgoRK-uxlo): by Microsoft’s AI red team shares real-world case studies, threat models, and recommendations from extensive experience testing generative AI systems.
+- [How Microsoft Approaches AI Red Teaming](https://www.youtube.com/watch?v=zFRn_RMSPI4): explains Microsoft's independent AI Red Team (AIRT) processes, tools like the PyRIT automation framework, and research on scaling AI security.
+- [HiddenLayer's Webinar: A Guide to AI Red Teaming](https://www.youtube.com/watch?v=7JUoiNXO_Ok): offers an introduction to attacking AI systems, core concepts, and how to start red teaming activities.
+- [Building Trust in AI: Introduction to Red-Teaming](https://www.youtube.com/watch?v=Zw_ulylWrhs): explores the importance, challenges, and implementation of red teaming for generative AI safety and reliability.
+- [Expertise isn't all you need - Building an AI Red Team](https://www.youtube.com/watch?v=dJ3_qVx0H_k): focuses on organizational support, budgets, and strategies for establishing an internal AI red team.
+- [Short: AI Red Teaming](https://www.youtube.com/shorts/eLil3ZEs6nc)
+- [AI Red Teaming: Practical Lessons](https://www.youtube.com/watch?v=2WvxYDpXw5s)
+
 ## Key Resources
 
 - [OWASP GenAI Red Teaming Guide](https://genai.owasp.org/resource/genai-red-teaming-guide/)
@@ -188,6 +181,9 @@ This image from the Microsoft blog illustrates the structured approach to AI red
 - [GenAI Red Teaming Guide (OWASP)](https://genai.owasp.org/resource/genai-red-teaming-guide/)
 - [MITRE ATLAS Framework](https://atlas.mitre.org/): A comprehensive repository for adversarial threat modeling in AI systems.
 - [MIT AI Risk Database](https://airisk.mit.edu/): A database for understanding and mitigating AI risks.
+- [Threat Composer](https://awslabs.github.io/threat-composer)
+- [Threat modelling](https://aws.amazon.com/blogs/security/how-to-approach-threat-modeling/)
+
 ---
 
 This document is a starting point. For detailed methodologies and the latest best practices, consult the resources above.
